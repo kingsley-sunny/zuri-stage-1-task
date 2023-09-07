@@ -43,7 +43,7 @@ const server = http.createServer((req, res) => {
     if (!query || !query?.slack_name || !query?.track) {
       return res
         .writeHead(501, { "content-type": "application/json" })
-        .end(JSON.stringify({ error: "query parameters slack_name and track is compulsory" }));
+        .end(JSON.stringify({ error: "query parameters slack_name and track is compulsory!" }));
     }
 
     const data = {
