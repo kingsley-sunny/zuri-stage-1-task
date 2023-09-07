@@ -20,7 +20,7 @@ router.get("/", (req, res, next) => {
     slack_name,
     current_day: getCurrentDayOfTheWeek(),
     track,
-    utc_time: new Date().toISOString(),
+    utc_time: getCurrentUTCTimeWithWindow(),
     github_file_url: "https://github.com/kingsley-sunny/zuri-stage-1-task/blob/main/src/app.js",
     github_repo_url: "https://github.com/kingsley-sunny/zuri-stage-1-task",
     status_code: 200,

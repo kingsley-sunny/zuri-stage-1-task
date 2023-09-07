@@ -1,19 +1,9 @@
 function getCurrentUTCTimeWithWindow() {
-  const now = new Date();
+  const utc_string = new Date().toISOString();
 
-  // Get the current UTC time in milliseconds
-  const currentUTCTime = now.getTime() + now.getTimezoneOffset() * 60 * 1000;
+  const string = utc_string.slice(0, 19);
 
-  // Generate a random number between -120000 (2 minutes in milliseconds) and 120000
-  const randomOffset = Math.floor(Math.random() * 240000) - 120000;
-
-  // Add the random offset to the current UTC time
-  const adjustedUTCTime = currentUTCTime + randomOffset;
-
-  // Create a new Date object with the adjusted time
-  const adjustedDate = new Date(adjustedUTCTime);
-
-  return adjustedDate.toISOString();
+  return `${string}Z`;
 }
 
 function getCurrentDayOfTheWeek() {
