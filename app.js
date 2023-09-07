@@ -48,7 +48,7 @@ const server = http.createServer((req, res) => {
       current_day: getCurrentDayOfTheWeek(),
       track: query.track,
       utc_time: getCurrentUTCTimeWithWindow(),
-      github_file_url: "https://github.com/username/repo/blob/main/app.js",
+      github_file_url: "https://github.com/kingsley-sunny/zuri-stage-1-task/blob/main/app.js",
       github_repo_url: "https://github.com/kingsley-sunny/zuri-stage-1-task",
       status_code: 200,
     };
